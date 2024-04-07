@@ -45,7 +45,7 @@ a {
   cursor: pointer;
 }
 
-#about > h1 > span {
+.left_about > h1 > span {
   font-size: 5vw;
 }
 
@@ -53,16 +53,37 @@ a {
   font-size: 1.5vw;
 }
 
+#about {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left_about {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+#beach {
+  margin-top: 3rem;
+  width: 48%;
+  border-radius: 20px;
+}
+
 #h1 {
   transform: translateY(-600px);
   animation: 1.2s slideInY ease-in-out forwards 1s;
   z-index: 10;
   opacity: 0;
+  margin: 3rem;
 }
 
 #h3 {
   font-size: 1.8vw;
-  padding-bottom: 5rem;
+  margin-top: 30vh;
+  margin-bottom: 20vh;
   animation: 3s slide-left forwards 2s;
   margin-left: 105%;
   min-width: 100vw;
@@ -71,7 +92,7 @@ a {
 
 @keyframes slideInY {
   100% {
-    transform: translateY(0px);
+    transform: translateY(50px);
     opacity: 1;
   }
 }
@@ -231,7 +252,6 @@ header {
     padding: 0.5em 0;
     width: 100%;
     color: whitesmoke;
-    /* background-color: #222; */
   }
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;
@@ -241,7 +261,6 @@ header {
 section {
   display: flex;
   flex-wrap: wrap;
-  /* background-color: black; */
   padding: 3rem 3rem 15rem 3rem;
 }
 
@@ -304,7 +323,7 @@ input {
   width: 100%;
   background-color: #1f1f1f;
   border-radius: 15px;
-  height: 2rem;
+  height: 5vh;
   border: none;
   padding: 1rem;
 }
@@ -314,12 +333,19 @@ input {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  height: 2.3vw;
+  height: 6vh;
 }
 
 input:focus {
   background-color: whitesmoke;
   color: black;
+}
+
+input,
+textarea:hover {
+  scale: 101%;
+  transition: 2s;
+  border: #333 solid 1px;
 }
 
 textarea {
@@ -332,6 +358,7 @@ textarea {
 
 textarea:focus {
   background-color: whitesmoke;
+  color: black;
 }
 
 main {
@@ -340,7 +367,6 @@ main {
   flex-wrap: wrap;
   height: auto;
   width: 100%;
-  /* background-color: black; */
   padding: 8rem 0 4rem 2rem;
 }
 
@@ -381,14 +407,15 @@ p {
 p > span {
   border-bottom: 1px #ffffff solid;
 }
-span,
+h1 > span,
 main h1 {
   font-family: Gilroy_Bold;
+  font-size: 3vw;
+  margin-top: 5rem;
 }
 
 main h1 {
   font-size: 6vw;
-  padding: 4rem 3rem 10rem 3rem;
 }
 
 main > h4 {
@@ -414,7 +441,7 @@ footer {
   text-align: center;
   width: 100%;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .footer_high {
@@ -520,11 +547,16 @@ footer {
 }
 
 #bam,
-#bom {
+#bom,
+#bomba {
   margin-bottom: 6vh;
 }
 
 .text {
   font-size: 2vw;
   padding-top: 1rem;
+}
+
+.little_about > h1 > span {
+  font-size: 50vw;
 }
